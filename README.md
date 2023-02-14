@@ -1,6 +1,6 @@
 # setup
-don't use this for yourself. it's stupid
-only public to make installation easier on new machines
+Don't use this for yourself.  
+You can, if you find something useful, but copying this beats Linux's "make it your own" style.
 
 # Software
 ```bash
