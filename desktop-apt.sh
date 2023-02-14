@@ -2,8 +2,8 @@
 sudo apt update
 
 # General Purpose
-## git, curl, wget, gnome-tweaks, vim, nano
-sudo apt install -y git curl wget gnome-tweaks, vim, nano, openvpn, nemo
+## git, curl, wget, gnome-tweaks, vim, nano, openvpn, screen
+sudo apt install -y git curl wget gnome-tweaks, vim, nano, openvpn, nemo, screen
 
 
 # DWM Tools
