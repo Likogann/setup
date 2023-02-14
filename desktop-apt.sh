@@ -3,12 +3,12 @@ sudo apt update
 
 # General Purpose
 ## git, curl, wget, gnome-tweaks, vim, nano
-sudo apt install -y git curl wget gnome-tweaks, vim, nano
+sudo apt install -y git curl wget gnome-tweaks, vim, nano, openvpn, nemo
 
 
 # DWM Tools
-## mc
-sudo apt install -y mc
+## mc, feh
+sudo apt install -y mc, feh
 
 
 # Custom Repos
@@ -45,6 +45,15 @@ echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] 
 curl https://gitlab.com/brinkervii/grapejuice/-/raw/master/ci_scripts/signing_keys/public_key.gpg | sudo tee /usr/share/keyrings/grapejuice-archive-keyring.gpg
 sudo tee /etc/apt/sources.list.d/grapejuice.list <<< 'deb [signed-by=/usr/share/keyrings/grapejuice-archive-keyring.gpg] https://brinkervii.gitlab.io/grapejuice/repositories/debian/ universal main'
 
+## Steam
+sudo tee /etc/apt/sources.list.d/steam.list <<'EOF'
+deb [arch=amd64,i386] http://repo.steampowered.com/steam/ stable steam
+deb-src [arch=amd64,i386] http://repo.steampowered.com/steam/ stable steam
+EOF
+sudo dpkg --add-architecture i386
+
 
 sudo apt update  
 sudo apt install -y codium librewolf signal-desktop grapejuice
+sudo apt install -y libgl1-mesa-dri:amd64 libgl1-mesa-dri:i386 libgl1-mesa-glx:amd64 libgl1-mesa-glx:i386 steam-launcher
+echo "done"
